@@ -114,4 +114,29 @@ enum Type2 {
 const createContent2 = (contentType: Type2) => {};
 
 createContent2(Type2.Quiz);
-createContent2('QUIZ'); // not going to work, not the _same_ string as the type'd version
+// createContent2('QUIZ'); // not going to work, not the _same_ string as the type'd version
+
+// Classes
+
+class Team {
+  // default public, or specify with 'public'
+  // or readonly = final
+  private readonly teamName: string;
+
+  constructor(teamName: string) {
+    this.teamName = teamName;
+  }
+
+  getTeamName() {
+    return this.teamName;
+  }
+
+  score(): string {
+    console.log('GOOOOOOOOOOAL');
+    return 'Goal!';
+  }
+}
+
+const redWings = new Team('Red Wings');
+redWings.score();
+console.log(redWings.getTeamName());
