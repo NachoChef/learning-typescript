@@ -1,3 +1,5 @@
+import Job, { Person } from './Interfaces';
+
 const isOpen: boolean = false;
 // this fails because name is defined on the window object already
 // const name: string = 'Scott';
@@ -12,11 +14,11 @@ const list: number[] = [0, 1, 2];
 const me: [string, number, boolean] = [theName, anAge, false];
 
 //enum
-enum Job {
-  WebDev,
-  WebDesigner,
-  Engineer,
-}
+// enum Job {
+//   WebDev,
+//   WebDesigner,
+//   Engineer,
+// }
 const job: Job = Job.Engineer;
 
 const phone: any = 'iPhone';
@@ -71,10 +73,10 @@ dog = 'lucie';
 
 // Interfaces
 
-interface Person {
-  name: string;
-  age?: number; // optional
-}
+// interface Person {
+//   name: string;
+//   age?: number; // optional
+// }
 
 // destructured interface param
 const sayName = ({ name, age }: Person): Person => {
