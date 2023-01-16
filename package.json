@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "parcel-bundler": "1.9.4",
+    "parcel-plugin-typescript": "^1.0.0"
   },
   "name": "learn-typescript",
   "version": "1.0.0",
