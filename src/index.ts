@@ -142,3 +142,28 @@ class Team {
 const redWings = new Team('Red Wings');
 redWings.score();
 console.log(redWings.getTeamName());
+
+// Generics
+
+const outputInput = <T>(arg: T): T => {
+  return arg;
+};
+
+outputInput('hi');
+outputInput(3);
+
+// Duck Typing
+
+class Dancer implements Person {
+  name: string;
+  age?: number;
+}
+
+let ElNino: Person = new Dancer();
+
+const fake = {
+  name: 'Scott',
+};
+
+// implicit cast, data shape conforms to interface (name is only required field)
+ElNino = fake;
